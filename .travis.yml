@@ -6,3 +6,6 @@ deploy:
   provider: heroku
   api_key:
     secure: smKU0ADCRKwpt52+uP2PJbtQRxsWaKndWAavrnKilMey2/FsUt9Wte6JY1VMBHnbRlsbIAS5rc+WN2HCH44B5ZXfBkMnBWKbwgRlXCNiOCBSd3xSwu2ZpVLFSyLCQTjy1Jb2sRaiyYo55uiLg0vei0eVtsNI74o6t18e7+HTt3b+Rysf/zcBu21uTS5dChmBoDlfVEdSHaRVlnD7ACo7d+SMhz5llv+B4g0Whd641ghsICUyQmPYP4Ks8aA3vLtx3bjyLwfFaTaz8G89DF6/Jzc7rfw3cKI0ToSkXUuOIe9Cj6W3i5e9WwTss93fGJZohb6tC+BUP9ajHYJncPLQvQUyuqSs/t/yawkOP64uAu/U18tNAV+TU4/fJjHNIk7L8WrqlDdMVVMi9GkhoILTLoU1fZjbSNM5RsZ6eV9C3p/Vdqvgy5zCSgiGEzVA21e+sKyLv0NgI/HNXmdqHx2m1+a3ZAzCOdVVDHRPN125UuLaMo/DVLYVlLF6Ok8j8lmRksVN8Duor1bKibKQmVcyAHjMMLAGKTTRrwsKLMHzQKC9AMWFG9g6iAgQ2CPtE/yZFFhVqNrZnCoctxQu7xouh7gq1slAgbIbvhqj2llFaK+KfANsuHBNToQzd86rVJRkxc0NlJHxKuaW5Z/BI6JWWxaLXkFc5RHa9RI0oO8JsZU=
+    app: frozen-reaches-39396
+      on:
+        repo: chnchryl/BasicWebApp
