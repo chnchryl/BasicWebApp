@@ -16,10 +16,11 @@ public class QueryProcessor {
         splitQuery.stream().map((x) -> x.toLowerCase()).collect(Collectors.toList());
         List<String> teamNameOutput = Arrays.asList("what", "is", "your", "team", "name");
         List<String> numbersLargest = Arrays.asList("numbers", "largest");
-        List<String> sum = Arrays.asList("plus");
+        List<String> plus = Arrays.asList("plus");
         List<String> mult = Arrays.asList("multiplied");
         List<String> squarecube = Arrays.asList("both", "square", "cube");
         List<String> eiffel = Arrays.asList("eiffel", "tower", "city");
+        List<String> sum = Arrays.asList("sum");
 
 
         for (String s : splitQuery){
@@ -45,7 +46,7 @@ public class QueryProcessor {
 
         }
 
-        if (splitQuery.containsAll(sum)) {
+        if (splitQuery.containsAll(plus)) {
             int number1 = Integer.parseInt(splitQuery.get(2));
             int number2 = Integer.parseInt(splitQuery.get(4));
             return Integer.toString(number1 +  number2);
@@ -64,6 +65,21 @@ public class QueryProcessor {
 
 
             return Integer.toString(prod);
+
+        }
+
+        if (splitQuery.containsAll(sum)) {
+
+            int summ = 0;
+
+            for (String s : splitQuery){
+                if(isNumeric(s)){
+                    summ += Integer.parseInt(s);
+                }
+            }
+
+
+            return Integer.toString(summ);
 
         }
 

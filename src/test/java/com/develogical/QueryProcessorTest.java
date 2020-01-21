@@ -38,6 +38,8 @@ public class QueryProcessorTest {
     @Test
     public void sum() throws Exception {
         assertThat(queryProcessor.process("what is 3 plus 5"), containsString("8"));
+        assertThat(queryProcessor.process("what is the sum of 3, 5, 5"), containsString("13"));
+
     }
 
     @Test
