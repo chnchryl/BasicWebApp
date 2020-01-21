@@ -14,6 +14,7 @@ public class QueryProcessor {
         List<String> teamNameOutput = Arrays.asList("what", "is", "your", "team", "name");
         List<String> numbersLargest = Arrays.asList("numbers", "largest");
         List<String> sum = Arrays.asList("plus");
+        List<String> mult = Arrays.asList("multiplied");
 
 
         for (String s : splitQuery){
@@ -43,6 +44,13 @@ public class QueryProcessor {
             int number1 = Integer.parseInt(splitQuery.get(2));
             int number2 = Integer.parseInt(splitQuery.get(4));
             return Integer.toString(number1 +  number2);
+
+        }
+
+        if (splitQuery.containsAll(mult)) {
+            int number1 = Integer.parseInt(splitQuery.get(2));
+            int number2 = Integer.parseInt(splitQuery.get(5));
+            return Integer.toString(number1 * number2);
 
         }
             return "";
