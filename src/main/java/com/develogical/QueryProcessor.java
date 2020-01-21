@@ -6,6 +6,11 @@ import java.util.stream.Collectors;
 
 public class QueryProcessor {
 
+
+    public boolean isNumeric(String s) {
+        return s != null && s.matches("[-+]?\\d*\\.?\\d+");
+    }
+
     public String process(String query) {
         List<String> splitQuery = Arrays.asList(query.split(("[\\p{Punct}\\s]+")));
         splitQuery.stream().map((x) -> x.toLowerCase()).collect(Collectors.toList());
@@ -48,9 +53,17 @@ public class QueryProcessor {
         }
 
         if (splitQuery.containsAll(mult)) {
-            int number1 = Integer.parseInt(splitQuery.get(2));
-            int number2 = Integer.parseInt(splitQuery.get(5));
-            return Integer.toString(number1 * number2);
+
+            int prod = 1;
+
+            for (String s : splitQuery){
+                if(isNumeric(s)){
+                    prod *= Integer.parseInt(s);
+                }
+            }
+
+
+            return Integer.toString(prod);
 
         }
 

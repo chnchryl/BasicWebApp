@@ -43,6 +43,8 @@ public class QueryProcessorTest {
     @Test
     public void mul() throws Exception {
         assertThat(queryProcessor.process("what is 3 multiplied by 5"), containsString("15"));
+        assertThat(queryProcessor.process("sdfsdfsdf what is 3 multiplied by 5"), containsString("15"));
+
     }
 
     @Test
