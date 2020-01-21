@@ -47,9 +47,16 @@ public class QueryProcessor {
         }
 
         if (splitQuery.containsAll(plus)) {
-            int number1 = Integer.parseInt(splitQuery.get(2));
-            int number2 = Integer.parseInt(splitQuery.get(4));
-            return Integer.toString(number1 +  number2);
+            int summ = 0;
+
+            for (String s : splitQuery){
+                if(isNumeric(s)){
+                    summ += Integer.parseInt(s);
+                }
+            }
+
+
+            return Integer.toString(summ);
 
         }
 
