@@ -44,4 +44,9 @@ public class QueryProcessorTest {
     public void mul() throws Exception {
         assertThat(queryProcessor.process("what is 3 multiplied by 5"), containsString("15"));
     }
+
+    @Test
+    public void cubeSquare() throws Exception {
+        assertThat(queryProcessor.process("which of the following is both cube and a square: 23, 34, 64"), containsString("64"));
+    }
 }

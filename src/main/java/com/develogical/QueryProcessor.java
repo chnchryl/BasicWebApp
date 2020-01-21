@@ -13,6 +13,7 @@ public class QueryProcessor {
         List<String> numbersLargest = Arrays.asList("numbers", "largest");
         List<String> sum = Arrays.asList("plus");
         List<String> mult = Arrays.asList("multiplied");
+        List<String> squarecube = Arrays.asList("both", "square", "cube");
 
 
         for (String s : splitQuery){
@@ -49,6 +50,24 @@ public class QueryProcessor {
             int number1 = Integer.parseInt(splitQuery.get(2));
             int number2 = Integer.parseInt(splitQuery.get(5));
             return Integer.toString(number1 * number2);
+
+        }
+
+        if (splitQuery.containsAll(squarecube)) {
+
+
+
+            for(int i = 10; i < splitQuery.size(); i++){
+                int num = Integer.parseInt(splitQuery.get(i));
+                int x = (int) Math.sqrt(num);
+                if (Math.pow(x, 2) == num){
+                    int y = (int) Math.cbrt(num);
+                    if(Math.round(y) == y){
+                        return Integer.toString(num);
+                    }
+                }
+            }
+            return "";
 
         }
             return "";
