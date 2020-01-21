@@ -1,7 +1,5 @@
 package com.develogical;
 
-import javafx.beans.binding.IntegerBinding;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
