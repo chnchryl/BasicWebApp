@@ -14,6 +14,7 @@ public class QueryProcessor {
         List<String> sum = Arrays.asList("plus");
         List<String> mult = Arrays.asList("multiplied");
         List<String> squarecube = Arrays.asList("both", "square", "cube");
+        List<String> eiffel = Arrays.asList("eiffel", "tower", "city");
 
 
         for (String s : splitQuery){
@@ -69,6 +70,10 @@ public class QueryProcessor {
             }
             return "";
 
+        }
+
+        if(splitQuery.containsAll(eiffel)){
+            return "Paris";
         }
             return "";
 

@@ -49,4 +49,9 @@ public class QueryProcessorTest {
     public void cubeSquare() throws Exception {
         assertThat(queryProcessor.process("which of the following is both cube and a square: 23, 34, 64"), containsString("64"));
     }
+
+    @Test
+    public void eiffel() throws Exception {
+        assertThat(queryProcessor.process("which city has the eiffel tower"), containsString("Paris"));
+    }
 }
