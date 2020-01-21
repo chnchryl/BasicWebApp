@@ -13,6 +13,7 @@ public class QueryProcessor {
         splitQuery.stream().map((x) -> x.toLowerCase()).collect(Collectors.toList());
         List<String> teamNameOutput = Arrays.asList("what", "is", "your", "team", "name");
         List<String> numbersLargest = Arrays.asList("numbers", "largest");
+        List<String> sum = Arrays.asList("plus");
 
 
         for (String s : splitQuery){
@@ -38,6 +39,13 @@ public class QueryProcessor {
 
         }
 
-        return "";
+        if (splitQuery.containsAll(sum)) {
+            int number1 = Integer.parseInt(splitQuery.get(2));
+            int number2 = Integer.parseInt(splitQuery.get(4));
+            return Integer.toString(number1 +  number2);
+
+        }
+            return "";
+
     }
 }
