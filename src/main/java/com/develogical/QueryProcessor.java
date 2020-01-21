@@ -27,6 +27,10 @@ public class QueryProcessor {
         List<String> banana = Arrays.asList("colour", "banana");
 
 
+        try{
+
+
+
         for (String s : splitQuery){
             System.out.println(s);
         }
@@ -139,6 +143,10 @@ public class QueryProcessor {
             return "yellow";
         }
             return "";
-
+        }
+        catch(Exception e){
+            System.out.println("oh no");
+            return "";
+        }
     }
 }
