@@ -11,6 +11,9 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("chicken")) {
             return "delish delis bok";
         }
+        if (query.toLowerCase().contains("team") && query.toLowerCase().contains("name")) {
+            return "chicken";
+        }
         return "";
     }
 }
