@@ -86,14 +86,15 @@ public class QueryProcessor {
         if (splitQuery.containsAll(squarecube)) {
 
 
-
-            for(int i = 10; i < splitQuery.size(); i++){
-                int num = Integer.parseInt(splitQuery.get(i));
-                int x = (int) Math.sqrt(num);
-                if (Math.pow(x, 2) == num){
-                    int y = (int) Math.cbrt(num);
-                    if(Math.round(y) == y){
-                        return Integer.toString(num);
+            for (String s : splitQuery){
+                if(isNumeric(s)) {
+                    int num = Integer.parseInt(s);
+                    int x = (int) Math.sqrt(num);
+                    if (Math.pow(x, 2) == num) {
+                        int y = (int) Math.cbrt(num);
+                        if (Math.round(y) == y) {
+                            return Integer.toString(num);
+                        }
                     }
                 }
             }
