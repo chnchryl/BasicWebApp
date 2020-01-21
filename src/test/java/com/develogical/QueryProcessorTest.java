@@ -63,4 +63,10 @@ public class QueryProcessorTest {
     public void minus() throws Exception {
         assertThat(queryProcessor.process("what is 3 minus 2"), containsString("1"));
     }
+
+    @Test
+    public void theresa() throws Exception {
+        assertThat(queryProcessor.process("theresa may elected prime minister"), containsString("2016"));
+    }
 }
+
