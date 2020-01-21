@@ -58,4 +58,9 @@ public class QueryProcessorTest {
     public void eiffel() throws Exception {
         assertThat(queryProcessor.process("which city has the eiffel tower"), containsString("Paris"));
     }
+
+    @Test
+    public void minus() throws Exception {
+        assertThat(queryProcessor.process("what is 3 minus 2"), containsString("1"));
+    }
 }

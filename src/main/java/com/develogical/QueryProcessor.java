@@ -1,5 +1,6 @@
 package com.develogical;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -21,6 +22,7 @@ public class QueryProcessor {
         List<String> squarecube = Arrays.asList("both", "square", "cube");
         List<String> eiffel = Arrays.asList("eiffel", "tower", "city");
         List<String> sum = Arrays.asList("sum");
+        List<String> minus = Arrays.asList("minus");
 
 
         for (String s : splitQuery){
@@ -106,6 +108,21 @@ public class QueryProcessor {
                 }
             }
             return "";
+
+        }
+
+        if (splitQuery.containsAll(minus)) {
+
+
+            List<Integer> nums = new ArrayList<>();
+
+            for (String s : splitQuery){
+                if(isNumeric(s)) {
+                    int num = Integer.parseInt(s);
+                    nums.add(num);
+                }
+            }
+            return Integer.toString(nums.get(0) - nums.get(1));
 
         }
 
