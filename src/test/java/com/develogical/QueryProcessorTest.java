@@ -38,6 +38,8 @@ public class QueryProcessorTest {
     @Test
     public void sum() throws Exception {
         assertThat(queryProcessor.process("what is 3 plus 5"), containsString("8"));
+        assertThat(queryProcessor.process("what is 3 plus 5 plus 3"), containsString("11"));
+
         assertThat(queryProcessor.process("what is the sum of 3, 5, 5"), containsString("13"));
 
     }
@@ -71,6 +73,11 @@ public class QueryProcessorTest {
     @Test
     public void banana() throws Exception {
         assertThat(queryProcessor.process("colour banana"), containsString("yellow"));
+    }
+
+    @Test
+    public void power() throws Exception {
+        assertThat(queryProcessor.process("what is 3 to the power of 2"), containsString("9"));
     }
 }
 

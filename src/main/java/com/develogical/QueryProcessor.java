@@ -25,6 +25,7 @@ public class QueryProcessor {
         List<String> minus = Arrays.asList("minus");
         List<String> theresa = Arrays.asList("theresa", "may", "prime", "minister");
         List<String> banana = Arrays.asList("colour", "banana");
+        List<String> power = Arrays.asList("power");
 
 
         try{
@@ -131,6 +132,21 @@ public class QueryProcessor {
             return Integer.toString(nums.get(0) - nums.get(1));
 
         }
+
+        if (splitQuery.containsAll(power)) {
+
+
+                List<Double> nums = new ArrayList<>();
+
+                for (String s : splitQuery){
+                    if(isNumeric(s)) {
+                        double num = Integer.parseInt(s);
+                        nums.add(num);
+                    }
+                }
+                return Integer.toString((int)Math.pow(nums.get(0), nums.get(1)));
+
+            }
 
         if(splitQuery.containsAll(eiffel)){
             return "Paris";
