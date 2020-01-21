@@ -24,6 +24,7 @@ public class QueryProcessor {
         List<String> sum = Arrays.asList("sum");
         List<String> minus = Arrays.asList("minus");
         List<String> theresa = Arrays.asList("theresa", "may", "prime", "minister");
+        List<String> banana = Arrays.asList("colour", "banana");
 
 
         for (String s : splitQuery){
@@ -133,6 +134,9 @@ public class QueryProcessor {
 
         if(splitQuery.containsAll(theresa)){
             return "2016";
+        }
+        if(splitQuery.containsAll(banana)){
+            return "yellow";
         }
             return "";
 
